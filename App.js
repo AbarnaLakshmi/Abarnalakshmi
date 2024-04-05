@@ -16,16 +16,14 @@ function LoginPage() {
   const [showTable,setShowTable] = useState(false);
 
   const handleChange = (e) => {
-    const {name,value} = e.target;
-    setFormData({
+    setFormData({       
       ...formData,
-      [name] : value
+      [e.target.name] : e.target.value
     });
   };
 
   const handleAdd = () => {
-    const newUser = {...formData};
-    setUserData([...userData,newUser]);
+    setUserData([...userData,{...formData}]);
     setFormData({
       name:'',
       age:'',
