@@ -39,8 +39,7 @@ const handleViewUsers = () => {
 };
 
 const handleDelete = (index) => {
-  const updatedData = userData.filter((user, i) => i !== index);
-  setUserData(updatedData);
+  setUserData(userData.filter((user, i) => i !== index));
 };
 
   return (
